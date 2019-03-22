@@ -1,6 +1,6 @@
 #include "Display.h"
-#include "Process.h"
-#include "Capture.h"
+#include "processes/Process.h"
+#include "captures/Capture.h"
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
 #include "opencv2/highgui.hpp"
@@ -16,7 +16,6 @@
 #include <thread>
 
 #include "devices/kinect.h"
-
 Display::Display(std::string name, Displayable &target) : _name(name), _target(target) {}
 
 void Display::Init() {
