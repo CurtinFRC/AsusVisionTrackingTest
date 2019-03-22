@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include <opencv2/core/core.hpp>
@@ -28,3 +29,4 @@ class Display : public Runnable {
   
   cv::Mat _displayMat;
 };
+*/

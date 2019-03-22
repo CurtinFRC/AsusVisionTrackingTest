@@ -1,3 +1,4 @@
+/*
 #include "captures/Capture.h"
 #include "processes/Process.h"
 
@@ -80,3 +81,4 @@ cv::Size Capture::GetDisplaySize() {
 bool Capture::IsValidFrame() {
   return _validFrame;
 }
+*/

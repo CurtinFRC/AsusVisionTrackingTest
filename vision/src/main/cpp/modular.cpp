@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "modular.h"
 
@@ -26,3 +27,4 @@ void Modular::Init() {
 
 void Modular::Periodic() {
 }
+*/
