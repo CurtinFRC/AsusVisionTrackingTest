@@ -31,9 +31,15 @@ class Modular : public RunModular {
   bool UseKinect;
   bool DriverCam;
 
-  int (DetectCam, DriverCam);
+  int CamPorts_W2 = (DetectCam, DriverCam);
+  int CamProts_W1 = (DetectCam);
+
 
   bool DetectRound;
   bool DetectSquare;
+
+  bool red;
+  bool green;
+  bool blue;
 
 };
