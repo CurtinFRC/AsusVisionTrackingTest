@@ -1,7 +1,8 @@
+/*
 #include "Display.h"
-#include "Capture.h"
-#include "TapeProcessing.h"
-// #include "ProcessController.h"
+#include "captures/Capture.h"
+#include "processes/TapeProcessing.h"
+#include "processes/ProcessController.h"
 
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
@@ -182,3 +183,4 @@ void TapeProcessing::GetDisplayMat(cv::Mat &displayMat) {
 cv::Size TapeProcessing::GetDisplaySize() {
   return _capture.GetDisplaySize();
 }
+*/

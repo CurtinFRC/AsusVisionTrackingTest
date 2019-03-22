@@ -1,7 +1,8 @@
+/*
 #include "Display.h"
-#include "Capture.h"
-#include "HatchProcessing.h"
-// #include "ProcessController.h"
+#include "captures/Capture.h"
+#include "processes/HatchProcessing.h"
+#include "processes/ProcessController.h"
 
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
@@ -185,3 +186,5 @@ void HatchProcessing::GetDisplayMat(cv::Mat &displayMat) {
 cv::Size HatchProcessing::GetDisplaySize() {
   return _capture.GetDisplaySize();
 }
+
+*/

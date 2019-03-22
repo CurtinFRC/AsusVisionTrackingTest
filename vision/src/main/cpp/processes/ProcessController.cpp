@@ -1,8 +1,8 @@
-#include "ProcessController.h"
+#include "processes/ProcessController.h"
 #include "networktables/NetworkTableInstance.h"
-#include "Capture.h"
-#include "TapeProcessing.h"
-#include "HatchProcessing.h"
+#include "captures/Capture.h"
+#include "processes/TapeProcessing.h"
+#include "processes/HatchProcessing.h"
 #include "Display.h"
 #include <iostream>
 
@@ -11,8 +11,6 @@
 void Processing::Init() {
   _useTape = true;
   _lastUseTape = false;
-
-  
 }
 
 void Processing::Periodic() {
