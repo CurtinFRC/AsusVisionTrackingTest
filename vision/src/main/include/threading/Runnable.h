@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include <thread>
@@ -11,9 +12,8 @@ class Runnable {
   virtual void Init() = 0;
   virtual void Periodic() = 0;
 
-  /**
-   * Use cv::waitKey, if this has a GUI
-   */
+
+  // Use cv::waitKey, if this has a GUI
   void SetUseCVWait(bool useCvWait);
 
   Runnable *StartThread(double framerate);
@@ -34,3 +34,4 @@ class Runnable {
   double _framerate_actual;
   timepoint_t _last_frame;
 };
+*/

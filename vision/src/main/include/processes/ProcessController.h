@@ -1,9 +1,10 @@
+/*
 #pragma once
 #include "threading/Runnable.h"
 #include "Display.h"
-#include "Process.h"
-#include "TapeProcessing.h"
-#include "HatchProcessing.h"
+#include "processes/Process.h"
+#include "processes/TapeProcessing.h"
+#include "processes/HatchProcessing.h"
 #include <string.h>
 #include <iostream>
 #include "networktables/NetworkTableInstance.h"
@@ -27,3 +28,4 @@ class Processing : public Runnable, public Displayable {
 	bool _useTape;
 	bool _lastUseTape;
 };
+*/

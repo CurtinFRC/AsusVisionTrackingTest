@@ -1,3 +1,4 @@
+/*
 #include "threading/Runnable.h"
 
 #include <opencv2/highgui/highgui.hpp>
@@ -49,3 +50,4 @@ double Runnable::GetFramePeriod() {
 double Runnable::GetActualFramerate() {
   return _framerate_actual;
 }
+*/

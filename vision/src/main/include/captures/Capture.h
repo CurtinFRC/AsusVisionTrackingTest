@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include "threading/Runnable.h"
@@ -39,3 +40,4 @@ class Capture : public Runnable, public Displayable {
   cs::VideoMode _videoMode;
   bool          _validFrame = false;
 };
+*/

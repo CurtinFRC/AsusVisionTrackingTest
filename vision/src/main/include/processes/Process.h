@@ -1,6 +1,7 @@
+/*
 #pragma once
 
-#include "Capture.h"
+#include "captures/Capture.h"
 #include "Display.h"
 #include "threading/Runnable.h"
 
@@ -31,3 +32,4 @@ class Process : public Runnable, public Displayable {
  protected:
   Capture &_capture;
 };
+*/

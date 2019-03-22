@@ -1,3 +1,4 @@
+/*
 #include "Display.h"
 #include "processes/Process.h"
 #include "captures/Capture.h"
@@ -37,4 +38,5 @@ void Display::Periodic() {
     _output.PutFrame(_displayMat);
   }
 }
+*/
 
