@@ -1,7 +1,7 @@
-#include "Capture.h"
-#include "TapeProcessing.h"
-#include "ProcessController.h"
-#include "HatchProcessing.h"
+#include "captures/Capture.h"
+#include "processes/TapeProcessing.h"
+#include "processes/ProcessController.h"
+#include "processes/HatchProcessing.h"
 #include "Display.h"
 #include <iostream>
 #include <networktables/NetworkTableInstance.h>

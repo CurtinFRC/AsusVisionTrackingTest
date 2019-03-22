@@ -1,5 +1,5 @@
-#include "Capture.h"
-#include "Process.h"
+#include "captures/Capture.h"
+#include "processes/Process.h"
 
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"

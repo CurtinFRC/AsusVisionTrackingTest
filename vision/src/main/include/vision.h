@@ -15,6 +15,7 @@ class Modularity {
 
 class Modular : public RunModular {
  public:
+  Display(std::string name, Modularity &target);
 
   void Init() override;
   void Periodic() override;
@@ -41,4 +42,4 @@ class Modular : public RunModular {
   bool green;
   bool blue;
 
-}
+};

@@ -1,7 +1,7 @@
 /*
 #include "Display.h"
-#include "Capture.h"
-#include "BallProcessing.h"
+#include "captures/Capture.h"
+#include "processes/BallProcessing.h"
 
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
