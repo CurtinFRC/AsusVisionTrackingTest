@@ -9,12 +9,13 @@ void Modular::Init() {
 
  CamPorts = (4,5); // Latter is Driver
 
- CamExposure = (-100,40);
+ CamExposure = (-100,40); 
 
  DetectRound = false;
  DetectSquare = false;
 
  DetectColour = green; // red, green, blue
+ 
 
 }
 
