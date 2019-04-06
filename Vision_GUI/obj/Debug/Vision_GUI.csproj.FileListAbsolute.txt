@@ -7,3 +7,5 @@ D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GU
 D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.csproj.CoreCompileInputs.cache
 D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.exe
 D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.pdb
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.Login.resources
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.Form2.resources
