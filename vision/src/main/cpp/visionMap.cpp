@@ -2,6 +2,8 @@
 #include <iostream>
 #include "modular.h"
 
+// This code by default is designed for 1 camera. and gives the option for one extra camera as a driver cam
+
 Modular::Modular(std::string name, Modularity &target) : _name(name), _target(target) {}
 
 void Modular::Init() {
@@ -21,6 +23,9 @@ void Modular::Init() {
 	DetectSquare = false;
 
 	DetectColour = green; // red, green, blue
+
+	offset_OutputName = "example";
+	
 
 
 }

@@ -6,6 +6,7 @@
 #include "Display.h"
 #include <iostream>
 #include <networktables/NetworkTableInstance.h>
+#include "visionMap.h"
 
 #ifndef RUNNING_FRC_TESTS
 int main(int argc, char **argv) {
@@ -66,7 +67,7 @@ int main(int argc, char **argv) {
   // frontProcess.JoinThread();
   // frontDisplay.JoinThread();
 
-  std::cout << "Vision Program Exited. Me thinks it broke??" << std::endl;
+  std::cout << "Vision Program Exited. Now there is a chance that it is meant to do that... but chances are it broke" << std::endl;
   return -1;
 }
 #endif

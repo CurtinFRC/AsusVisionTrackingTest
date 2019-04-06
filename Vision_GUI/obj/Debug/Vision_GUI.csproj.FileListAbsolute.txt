@@ -1,0 +1,9 @@
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\bin\Debug\Vision_GUI.exe.config
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\bin\Debug\Vision_GUI.exe
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\bin\Debug\Vision_GUI.pdb
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.csprojAssemblyReference.cache
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.Properties.Resources.resources
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.csproj.GenerateResource.cache
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.csproj.CoreCompileInputs.cache
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.exe
+D:\Users\Conno\Desktop\Code\ModularVisionTracking\Vision_GUI\obj\Debug\Vision_GUI.pdb
