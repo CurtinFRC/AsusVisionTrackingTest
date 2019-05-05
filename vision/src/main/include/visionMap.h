@@ -1,46 +1,24 @@
-/*
 #pragma once
+#include "CJlib/cj.h"
 
-#include <opencv2/core/core.hpp>
-#include <cscore.h>
-
-#include "threading/Runnable.h"
-
-#include <mutex>
-
-class Modularity {
+class TapeProcessing : public Process {
  public:
-  virtual void GetDisplayMat(cv::Mat &displayMat) = 0;
-  virtual cv::Size GetDisplaySize() = 0;
-};
-
-class Modular : public RunModular {
- public:
+  TapeProcessing(Capture &capture) : Process(capture) {}
 
   void Init() override;
   void Periodic() override;
 
  private:
-  std::string _name;
-  Modularity &_target;
-  
-  cs::CvSource _output;
-  
-  cv::Mat _displayMat;
-
-  bool UseKinect;
-  bool DriverCam;
-
-  int CamPorts_W2 = (DetectCam, DriverCam);
-  int CamProts_W1 = (DetectCam);
-
-
-  bool DetectRound;
-  bool DetectSquare;
-
-  bool red;
-  bool green;
-  bool blue;
-
-}
-*/
+  cv::Mat imgHSV;
+  cv::Mat _captureMat;
+  std::vector<std::vector<cv::Point>> contours;
+  std::vector<std::vector<cv::Point>> filteredContours;
+  // Target vectors
+  std::vector<cv::Point2f> centres;
+  std::vector<cv::Point2f> targets;
+  std::vector<bool> lefts;
+  std::vector<bool> rights;
+  std::vector<float> angles;
+  std::vector<float> heights;
+  std::vector<float> distances;
+};
