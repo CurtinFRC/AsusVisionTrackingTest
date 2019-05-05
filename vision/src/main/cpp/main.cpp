@@ -1,5 +1,5 @@
 #include "Display.h"
-#include "CJlib/cj.h"
+#include "visionMap.h"
 
 #ifndef RUNNING_FRC_TESTS
 int main(int argc, char **argv) {
@@ -24,11 +24,8 @@ int main(int argc, char **argv) {
     ntinst.StartServer();
   }
 
-
-
-  for (int i = 0; i < vision.workers.size(); i++) {
-    vision.workers[i].join();
-  }
+  visionMapInit();
+  visionMapPeriodic();
   
   std::cout << "Vision Program Exited. Broken??" << std::endl;
   return -1;

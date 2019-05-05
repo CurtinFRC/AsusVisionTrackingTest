@@ -1,4 +1,4 @@
-#include "devices/kinect.h"
+#include "CustomLib/devices/kinect.h"
 
 #include <iostream>
 
