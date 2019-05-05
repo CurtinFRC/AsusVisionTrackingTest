@@ -1,4 +1,3 @@
-/*
 #pragma once
 
 #include <opencv2/core/core.hpp>
@@ -28,19 +27,6 @@ class Modular : public RunModular {
   
   cv::Mat _displayMat;
 
-  bool UseKinect;
-  bool DriverCam;
-
-  int CamPorts_W2 = (DetectCam, DriverCam);
-  int CamProts_W1 = (DetectCam);
-
-
-  bool DetectRound;
-  bool DetectSquare;
-
-  bool red;
-  bool green;
-  bool blue;
+  bool usingCustom;
 
 }
-*/

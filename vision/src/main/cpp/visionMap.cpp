@@ -1,6 +1,5 @@
-/*
 #include <iostream>
-#include "modular.h"
+#include "visionMap.h"
 
 // This code by default is designed for 1 camera. and gives the option for one extra camera as a driver cam
 
@@ -32,4 +31,3 @@ void Modular::Init() {
 
 void Modular::Periodic() {
 }
-*/
