@@ -1,6 +1,6 @@
-#include "devices/kinect.h"
+#include "CJlib/devices/kinect.h"
 
-#include <iostream>
+#include "CJlib/cj.h"
 
 // Driver //
 
