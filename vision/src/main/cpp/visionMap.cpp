@@ -9,6 +9,8 @@ void visionMapInit() {
   if (usingCJlib) {
     std::cout << "Using CJ's Library" << std::endl;
 
+    /**/ // <-- Need to Link 
+
     /**/usingKinect = false; // Using the kinect as a camera
     camPort = 4; // The port the camera is located
     resWidth, resHeight = 640,480; // The resolution of the camera
