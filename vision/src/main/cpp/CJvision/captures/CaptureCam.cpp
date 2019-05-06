@@ -1,4 +1,5 @@
 #include "CJlib/cj.h"
+#include "visionMap.h"
 
 using namespace cv;
 using namespace std;
@@ -38,7 +39,7 @@ void Capture::Init() {
   _sink.SetSource(_cam);
 
   // The camera defaults to a lower resolution, but you can choose any compatible resolution here.
-  _cam.SetResolution(640, 480);
+  _cam.SetResolution(resWidth,resHeight);
 
   for (auto it : _cam.EnumerateProperties()) {
     std::cout << "Property: " << it.GetName() << " -> " << it.Get() << std::endl;
