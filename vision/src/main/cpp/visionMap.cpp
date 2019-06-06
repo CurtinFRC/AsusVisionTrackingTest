@@ -3,7 +3,7 @@
 #include "visionMap.h"
 
 // Vision Map is the main mapping source of the code. And allows you to change the options of the project
-void visionMapInit() {
+void visionMap() {
   usingCJlib = true;
 
   if (usingCJlib) {
@@ -78,12 +78,12 @@ void visionMapInit() {
   #else
   Capture capture{camPort, camExposure};
   #endif
-}
+
+  // Threading
+  std::thread Capture (Capture);
+  //std::thread Process (Process);
+  //std::thread Display (Display);
 
 
-void visionMapPeriodic() {
-  for (int i = 0; i < vision.workers.size(); i++) {
-    vision.workers[i].join();
-  }
 
 }

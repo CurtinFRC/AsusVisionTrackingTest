@@ -1,8 +1,7 @@
 #pragma once
 #include "CJlib/cj.h"
 
-void visionMapInit();
-void visionMapPeriodic();
+void visionMap();
 
 bool usingKinect;
 int camPort;
