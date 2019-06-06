@@ -24,8 +24,9 @@ int main(int argc, char **argv) {
     ntinst.StartServer();
   }
 
-  visionMapInit();
-  visionMapPeriodic();
+
+  // Completed Main, Now Starting Up Vision Map
+  visionMap();
   
   std::cout << "Vision Program Exited. Broken??" << std::endl;
   return -1;
