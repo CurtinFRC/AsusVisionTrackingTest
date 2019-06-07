@@ -44,7 +44,7 @@ void visionMap() {
   }
 
   if (usingCJlib) {
-    CJVisionRunner vision;
+    VisionRunner vision;
   }
   else {
     VisionRunner vision;

@@ -40,9 +40,3 @@
 
 
 // Using CJlib
-
-class CJlib {
- public:
-  bool usingCJlib;
-};
-

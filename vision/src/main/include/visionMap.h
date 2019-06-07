@@ -3,6 +3,8 @@
 
 void visionMap();
 
+bool usingCJlib;
+
 bool usingKinect;
 int camPort;
 int resWidth;
