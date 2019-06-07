@@ -3,7 +3,7 @@
 #include <thread>
 #include <chrono>
 
-class CJRunnable {
+class Runnable {
  public:
   using clock_t = std::chrono::steady_clock; 
   using timepoint_t = clock_t::time_point;

@@ -6,8 +6,8 @@
 #include "CJlib/processes/Process.h"
 #include "CJlib/processes/ProcessController.h"
 #include "CJlib/processes/TapeProcessing.h"
-#include "CJlib/threading/CJRunnable.h"
-#include "CJlib/threading/CJVisionRunner.h"
+#include "threading/Runnable.h"
+#include "threading/VisionRunner.h"
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -25,6 +25,8 @@
 #include <cscore.h>
 #include <chrono>
 #include <thread>
+#include <mutex>
+
 
 // Network Tables and Camera Servers
 #include <cameraserver/CameraServer.h>
@@ -39,5 +41,8 @@
 
 // Using CJlib
 
-bool usingCJlib;
+class CJlib {
+ public:
+  bool usingCJlib;
+};
 

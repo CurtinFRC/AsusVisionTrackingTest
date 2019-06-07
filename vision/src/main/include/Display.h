@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CJlib/cj.h"
+#include "Customlib/custom.h"
 
 class Displayable {
  public:
