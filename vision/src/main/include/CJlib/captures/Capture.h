@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CJlib/cj.h"
+
 #include "threading/Runnable.h"
 #include <cscore.h>
 #include <mutex>

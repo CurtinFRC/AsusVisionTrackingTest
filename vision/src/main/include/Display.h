@@ -1,7 +1,11 @@
 #pragma once
 
-#include "CJlib/cj.h"
-#include "Customlib/custom.h"
+#include <opencv2/core/core.hpp>
+#include <cscore.h>
+
+#include "threading/Runnable.h"
+
+#include <mutex>
 
 class Displayable {
  public:

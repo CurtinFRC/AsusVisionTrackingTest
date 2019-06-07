@@ -1,6 +1,11 @@
 #pragma once
 
-#include "CJlib/cj.h"
+// #include "CJlib/cj.h"
+
+#include "threading/Runnable.h"
+#include "CJlib/captures/Capture.h"
+#include "Display.h"
+#include <mutex>
 
 class Process : public Runnable, public Displayable {
  public:
