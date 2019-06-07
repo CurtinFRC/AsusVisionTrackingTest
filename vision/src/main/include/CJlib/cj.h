@@ -1,6 +1,6 @@
+#pragma once
 // CJlib
 #include "CJlib/captures/Capture.h"
-#include "CJlib/devices/kinect.h"
 #include "CJlib/processes/BallProcessing.h"
 #include "CJlib/processes/HatchProcessing.h"
 #include "CJlib/processes/Process.h"
