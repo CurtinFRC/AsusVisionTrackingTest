@@ -1,13 +1,17 @@
 #pragma once
 
-#include "CJlib/threading/CJRunnable.h"
-
-#include <opencv2/core/core.hpp>
+#include "CJlib/cj.h"
+#include "threading/Runnable.h"
 #include <cscore.h>
 #include <mutex>
-#include <condition_variable>
+#include "opencv2/objdetect.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/core/core.hpp"
 
-class Capture : public CJRunnable {
+class Capture : public Runnable {
  public:
   Capture(int port, int exposure);
   int GetPort();

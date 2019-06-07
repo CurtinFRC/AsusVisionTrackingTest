@@ -25,6 +25,8 @@
 #include <cscore.h>
 #include <chrono>
 #include <thread>
+#include <mutex>
+
 
 // Network Tables and Camera Servers
 #include <cameraserver/CameraServer.h>
@@ -39,5 +41,8 @@
 
 // Using CJlib
 
-bool usingCJlib;
+class CJlib {
+ public:
+  bool usingCJlib;
+};
 
