@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CJRunnable.h"
+#include "CJlib/threading/CJRunnable.h"
 
 #include <opencv2/core/core.hpp>
 #include <cscore.h>

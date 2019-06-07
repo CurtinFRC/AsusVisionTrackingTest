@@ -1,3 +1,4 @@
+#pragma once
 // CJlib
 #include "CJlib/captures/Capture.h"
 #include "CJlib/devices/kinect.h"
