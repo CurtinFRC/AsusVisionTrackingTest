@@ -28,29 +28,6 @@ void visionMap() {
     /**/noisefix = 0; // gets rid of noise under a certain pixel size (does slow the processing)
     
 
-    
-    
-
-    // Reference code from ye old days
-    /*
-    HatchProcessing hatchProcess{captureGamePiece};
-    BallProcessing ballProcess{capture};
-    TapeProcessing tapeProcess{capture};
-    
-    Display displayBall{ballProcess};
-    Display displayHatch{hatchProcess};
-    Display displayTape{tapeProcess};
-    
-    vision.Run(capture);
-    vision.Run(captureGamePiece);
-    vision.Run(ballProcess);
-    vision.Run(hatchProcess);
-    vision.Run(tapeProcess);
-
-    vision.Run(displayBall);
-    vision.Run(displayHatch);
-    vision.Run(displayTape);
-    */
   }
   else // Using Custom
   {

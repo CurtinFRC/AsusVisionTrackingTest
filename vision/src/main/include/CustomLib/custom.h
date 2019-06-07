@@ -1,13 +1,12 @@
 // CustomLib
 #include "CustomLib/captures/Capture.h"
-#include "CustomLib/devices/kinect.h"
 #include "CustomLib/processes/BallProcessing.h"
 #include "CustomLib/processes/HatchProcessing.h"
 #include "CustomLib/processes/Process.h"
 #include "CustomLib/processes/ProcessController.h"
 #include "CustomLib/processes/TapeProcessing.h"
-#include "CustomLib/threading/Runnable.h"
-#include "CustomLib/threading/VisionRunner.h"
+#include "threading/Runnable.h"
+#include "threading/VisionRunner.h"
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -39,5 +38,5 @@
 
 // Using CustomLib
 
-bool usingCJlib;
+bool usingCustomlib;
 
