@@ -1,6 +1,5 @@
 // CustomLib
 #include "CustomLib/captures/Capture.h"
-#include "CustomLib/devices/kinect.h"
 #include "CustomLib/processes/BallProcessing.h"
 #include "CustomLib/processes/HatchProcessing.h"
 #include "CustomLib/processes/Process.h"
@@ -39,5 +38,5 @@
 
 // Using CustomLib
 
-bool usingCJlib;
+bool usingCustomlib;
 
