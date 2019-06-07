@@ -1,4 +1,5 @@
 #include "CJlib/cj.h"
+#include "threading/Runnable.h"
 #include "Display.h"
 
 Display::Display(std::string name, Displayable &target) : _name(name), _target(target) {}
