@@ -7,7 +7,7 @@
 #include <mutex>
 #include <condition_variable>
 
-class Capture : public Runnable {
+class Capture : public CJRunnable {
  public:
   Capture(int port, int exposure);
   int GetPort();
