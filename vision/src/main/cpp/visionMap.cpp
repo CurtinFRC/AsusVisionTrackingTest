@@ -1,4 +1,5 @@
 #include "CJlib/cj.h"
+#include "threading/Runnable.h"
 #include "CustomLib/custom.h"
 #include "visionMap.h"
 
@@ -43,24 +44,20 @@ void visionMap() {
     */
   }
 
-  if (usingCJlib) {
-    VisionRunner vision;
-  }
-  else {
-    VisionRunner vision;
-  }
-
   #ifdef __DESKTOP__
-  Capture capture{0, -100};
+  CJCapture CJcapture{0, -100};
   #else
-  Capture capture{camPort, camExposure};
+  CJCapture CJcapture{camPort, camExposure};
   #endif
 
-  // Threading
-  std::thread Capture (Capture);
-  //std::thread Process (Process);
-  //std::thread Display (Display);
-
-
-
+  if(usingCJlib){
+    // Threading
+    CJcapture.StartThread(30.0);
+    // Process.StartThread(30.0);
+  }else{
+    // Threading
+    capture.StartThread(30.0);
+    // Process.StartThread(30.0);
+  }
+  // Display.StartThread(30.0);
 }

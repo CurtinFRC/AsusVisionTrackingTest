@@ -4,10 +4,10 @@
 using namespace cv;
 using namespace std;
 
-Capture::Capture(int port, int exposure) : _cam("USBCam", port) {_cam.SetExposureManual(exposure);}
+CJCapture::CJCapture(int port, int exposure) : _cam("USBCam", port) {_cam.SetExposureManual(exposure);}
 
 // Getters
-cs::VideoMode Capture::GetVideoMode() {
+cs::VideoMode CJCapture::GetVideoMode() {
   if (_videoMode.height == 0 || _videoMode.width == 0) {
     // If our videoMode is invalid, wait for Init() to be called (thus setting _videoMode)
     // using our condition variable
@@ -18,22 +18,22 @@ cs::VideoMode Capture::GetVideoMode() {
 }
 
 // Copiers
-void Capture::CopyCaptureMat(cv::Mat &captureMat) {
+void CJCapture::CopyCaptureMat(cv::Mat &captureMat) {
   std::lock_guard<std::mutex> lock(_classMutex);
   _captureMat.copyTo(captureMat);
 }
 
-bool Capture::IsValidFrameThresh() {
+bool CJCapture::IsValidFrameThresh() {
   return _isValidThresh;
 }
 
-bool Capture::IsValidFrameTrack() {
+bool CJCapture::IsValidFrameTrack() {
   return _isValidTrack;
 }
 
 
 
-void Capture::Init() {
+void CJCapture::Init() {
   //std::lock_guard<std::mutex> lock(_classMutex); // do i need this ? *
 
   _sink.SetSource(_cam);
@@ -51,7 +51,7 @@ void Capture::Init() {
   _initCondVar.notify_all();
 }
 
-void Capture::Periodic() {
+void CJCapture::Periodic() {
   _isValidThresh = _isValidTrack = _sink.GrabFrame(_captureMat) != 0;
   // _isValidTrack = _sink.GrabFrame(_captureMat) != 0;
   // std::cout << _sink.GrabFrame(_captureMat) << std::endl;
