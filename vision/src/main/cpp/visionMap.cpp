@@ -1,6 +1,8 @@
-#include "CJlib/cj.h"
-#include "CustomLib/custom.h"
+#include "threading/Runnable.h"
 #include "visionMap.h"
+#include <iostream>
+#include "CJlib/captures/CJCapture.h"
+// #include "CJlib/cj.h"
 
 // Vision Map is the main mapping source of the code. And allows you to change the options of the project
 void visionMap() {
@@ -43,24 +45,20 @@ void visionMap() {
     */
   }
 
-  if (usingCJlib) {
-    VisionRunner vision;
-  }
-  else {
-    VisionRunner vision;
-  }
-
   #ifdef __DESKTOP__
-  Capture capture{0, -100};
+  CJCapture CJcapture{0, -100};
   #else
-  Capture capture{camPort, camExposure};
+  CJCapture CJcapture{camPort, camExposure};
   #endif
 
-  // Threading
-  std::thread Capture (Capture);
-  //std::thread Process (Process);
-  //std::thread Display (Display);
-
-
-
+  if(usingCJlib){
+    // Threading
+    CJcapture.StartThread(30.0);
+    // Process.StartThread(30.0);
+  }else{
+    // Threading
+    // capture.StartThread(30.0);
+    // Process.StartThread(30.0);
+  }
+  // Display.StartThread(30.0);
 }

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "CJlib/cj.h"
-
 #include "threading/Runnable.h"
 #include <cscore.h>
 #include <mutex>
@@ -12,9 +10,9 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/core/core.hpp"
 
-class Capture : public Runnable {
+class CJCapture : public Runnable {
  public:
-  Capture(int port, int exposure);
+  CJCapture(int port, int exposure);
   int GetPort();
   void Init() override;
   void Periodic() override;

@@ -5,8 +5,6 @@
 #include "CustomLib/processes/Process.h"
 #include "CustomLib/processes/ProcessController.h"
 #include "CustomLib/processes/TapeProcessing.h"
-#include "threading/Runnable.h"
-#include "threading/VisionRunner.h"
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -18,6 +16,7 @@
 #include "opencv2/core/core.hpp"
 
 // System and Threading
+#include "threading/Runnable.h"
 #include <stdio.h>
 #include <iostream>
 #include <cameraserver/CameraServer.h>

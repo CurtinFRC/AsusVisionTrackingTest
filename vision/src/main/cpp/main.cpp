@@ -1,5 +1,11 @@
 #include "Display.h"
 #include "visionMap.h"
+#include <iostream>
+#include <cameraserver/CameraServer.h>
+#include <cscore.h>
+#include <networktables/NetworkTableInstance.h>
+#include <networktables/NetworkTable.h>
+#include <networktables/NetworkTableEntry.h>
 
 #ifndef RUNNING_FRC_TESTS
 int main(int argc, char **argv) {
@@ -16,7 +22,7 @@ int main(int argc, char **argv) {
 
   auto ntinst = nt::NetworkTableInstance::GetDefault();
   if (team != 0) {
-    std::cout << "Starting CurtinFRC Vision Program (Client Mode - Team " << team << ")" << std::endl;
+    std::cout << "Starting Modular Vision Program (Client Mode - Team " << team << ")" << std::endl;
     ntinst.StartClientTeam(team);
   } else {
     std::cout << "Starting CurtinFRC Vision Program (Server Mode - For Testing Only)" << std::endl;
