@@ -1,7 +1,8 @@
-#include "CJlib/cj.h"
 #include "threading/Runnable.h"
-#include "CustomLib/custom.h"
 #include "visionMap.h"
+#include <iostream>
+#include "CJlib/captures/CJCapture.h"
+// #include "CJlib/cj.h"
 
 // Vision Map is the main mapping source of the code. And allows you to change the options of the project
 void visionMap() {
@@ -56,7 +57,7 @@ void visionMap() {
     // Process.StartThread(30.0);
   }else{
     // Threading
-    capture.StartThread(30.0);
+    // capture.StartThread(30.0);
     // Process.StartThread(30.0);
   }
   // Display.StartThread(30.0);

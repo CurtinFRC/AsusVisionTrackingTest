@@ -1,5 +1,6 @@
-#include "CJlib/cj.h"
+// #include "CJlib/cj.h"
 #include "visionMap.h"
+#include "CJlib/captures/CJCapture.h"
 
 using namespace cv;
 using namespace std;

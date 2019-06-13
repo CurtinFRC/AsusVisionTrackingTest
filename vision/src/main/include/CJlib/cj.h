@@ -3,7 +3,7 @@
 #include "CJlib/captures/CJCapture.h"
 #include "CJlib/processes/BallProcessing.h"
 #include "CJlib/processes/HatchProcessing.h"
-#include "CJlib/processes/Process.h"
+#include "CJlib/processes/CJProcess.h"
 #include "CJlib/processes/ProcessController.h"
 #include "CJlib/processes/TapeProcessing.h"
 
@@ -25,6 +25,7 @@
 #include <chrono>
 #include <thread>
 #include <mutex>
+#include <string>
 
 
 // Network Tables and Camera Servers

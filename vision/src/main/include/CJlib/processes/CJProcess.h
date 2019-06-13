@@ -1,6 +1,4 @@
-#pragma once
-
-// #include "CJlib/cj.h"
+// // #include "CJlib/cj.h"
 
 #include "threading/Runnable.h"
 #include "CJlib/captures/CJCapture.h"
@@ -17,6 +15,7 @@ class Process : public Runnable, public Displayable {
   
   void GetDisplayMat(cv::Mat &displayMat) override;
   cv::Size GetDisplaySize() override;
+
 
   std::string GetProcessType();
 

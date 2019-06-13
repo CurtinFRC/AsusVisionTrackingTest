@@ -1,6 +1,12 @@
-#include "CJlib/cj.h"
+// #include "CJlib/cj.h"
 #include "threading/Runnable.h"
 #include "Display.h"
+#include <cameraserver/CameraServer.h>
+#include <cscore.h>
+#include <networktables/NetworkTableInstance.h>
+#include <networktables/NetworkTable.h>
+#include <networktables/NetworkTableEntry.h>
+
 
 Display::Display(std::string name, Displayable &target) : _name(name), _target(target) {}
 
