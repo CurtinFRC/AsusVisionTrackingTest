@@ -1,5 +1,6 @@
 #include "Display.h"
 #include "visionMap.h"
+#include "CJlib/Secret/itbroke.h"
 #include <iostream>
 #include <cameraserver/CameraServer.h>
 #include <cscore.h>
@@ -25,7 +26,7 @@ int main(int argc, char **argv) {
     std::cout << "Starting Modular Vision Program (Client Mode - Team " << team << ")" << std::endl;
     ntinst.StartClientTeam(team);
   } else {
-    std::cout << "Starting CurtinFRC Vision Program (Server Mode - For Testing Only)" << std::endl;
+    std::cout << "Starting Modular Vision Program (Server Mode - For Testing Only)" << std::endl;
     ntinst.SetServer("CurtinFRCVision");
     ntinst.StartServer();
   }
@@ -35,6 +36,7 @@ int main(int argc, char **argv) {
   visionMap();
   
   std::cout << "Vision Program Exited. Broken??" << std::endl;
+  itbroke();
   return -1;
 }
 #endif
