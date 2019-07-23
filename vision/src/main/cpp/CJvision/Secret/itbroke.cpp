@@ -1,4 +1,4 @@
-#include "CJlib/Secret/itbroke.h"
+#include "itbroke.h"
 #include <stdio.h>
  
 const char rocket[] =
