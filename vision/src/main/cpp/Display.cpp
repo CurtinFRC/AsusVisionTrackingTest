@@ -7,6 +7,6 @@ void curtin_frc_vision::displayInit() {
   
 }
 
-void displayPeriodic() {
+void curtin_frc_vision::displayPeriodic() {
   
 }

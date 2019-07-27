@@ -36,6 +36,9 @@ void curtin_frc_vision::mapInit() {
 	blur = 0;
 	noisefix = 0;
 
+	// Capture Math
+	widthGoal = resWidth/2;
+  heightGoal = resHeight/2;
 
 	// Output Values
 	std::cout << "camPort = " << camPort << std::endl;
@@ -51,6 +54,9 @@ void curtin_frc_vision::mapInit() {
 	std::cout << "distance = " << distance << std::endl;
 	std::cout << "blur = " << blur << std::endl;
 	std::cout << "noisefix = " << noisefix << std::endl;
+
+	// Capture Output
+	std::cout << "Goals: " << widthGoal << "," << heightGoal << std::endl; 
 }
 
 void visionRun() {
@@ -62,6 +68,7 @@ void visionRun() {
 
 	// Periodic
 	while (true) {
-		threading();
+		curtin_frc_vision threadStart;
+		threadStart.threading();
 	}
 }

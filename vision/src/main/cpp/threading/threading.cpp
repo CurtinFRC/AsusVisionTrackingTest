@@ -4,11 +4,12 @@
 #include "vision.h"
 #include "captures/capture.h"
 
-void threading() {
+void curtin_frc_vision::threading() {
+
   // Thread Initialization
-  std::thread captureObj(capturePeriodic);
-  std::thread processingObj(processingPeriodic);
-  std::thread displayObj(displayPeriodic);
+  std::thread captureObj(&curtin_frc_vision::capturePeriodic, this);
+  std::thread processingObj(&curtin_frc_vision::processingPeriodic, this);
+  std::thread displayObj(&curtin_frc_vision::displayPeriodic, this);
 
   // Thread Joining
   captureObj.join();

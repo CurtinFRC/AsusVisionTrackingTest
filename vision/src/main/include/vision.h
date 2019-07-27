@@ -23,6 +23,22 @@ class curtin_frc_vision {
   void processingInit();
   void displayInit();
 
+  // Threading
+  void threading();
+    
+  // Vision Periodic
+  void capturePeriodic();
+  void processingPeriodic();
+  void displayPeriodic();
+
+  // Capture Variables
+  float widthGoal;
+  float heightGoal;
+  float widthOffset;
+  float heightOffset;
+  bool isValidFrame;
+
+  // Vision Map
   int camPort;
   int resWidth;
   int resHeight;
@@ -39,15 +55,10 @@ class curtin_frc_vision {
   bool distance;
   int blur;
   int noisefix;
+
+  cv::Mat imgOriginal;
+  cv::Mat imgTracking;
 };
 
 // Vision Main Start Function
 void visionRun();
-
-// Threading
-void threading();
-
-// Vision Periodic
-void capturePeriodic();
-void processingPeriodic();
-void displayPeriodic();

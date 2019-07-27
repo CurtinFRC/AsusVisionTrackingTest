@@ -7,6 +7,6 @@ void curtin_frc_vision::processingInit() {
   
 }
 
-void processingPeriodic() {
+void curtin_frc_vision::processingPeriodic() {
   
 }

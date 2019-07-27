@@ -22,8 +22,30 @@
 
 void curtin_frc_vision::captureInit() {
   cs::UsbCamera cam{"USBCam", camPort};
+  cs::CvSink sink{"USB"};
+  sink.SetSource(cam);
+
+  cam.SetResolution(resWidth, resHeight);
+
+  auto video_mode = cam.GetVideoMode();
+
+  // This lets us see the camera output on the robot dashboard. We give it a name, and a width and height.
+  cs::CvSource output = frc::CameraServer::GetInstance()->PutVideo("USB Camera", video_mode.width, video_mode.height);
+
+  imgOriginal = cv::Mat::zeros(video_mode.height, video_mode.width, CV_8UC3);
+
+  cam.SetExposureManual(camExposure);
+
+  if (sink.GrabFrame(imgOriginal) != 0) {
+    isValidFrame = true;
+  }
+  
 }
 
-void capturePeriodic() {
+void curtin_frc_vision::capturePeriodic() {
+  if (isValidFrame)
+  {
+    
+  }
   
 }
