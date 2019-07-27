@@ -1,6 +1,4 @@
-#include <thread>
-#include <iostream>
-
+#pragma once
 // OpenCV
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
@@ -17,13 +15,10 @@
 #include <cscore.h>
 
 // Local Libraries
-#include "captures/capture.h"
 #include "vision.h"
 
-void curtin_frc_vision::captureInit() {
-  cs::UsbCamera cam{"USBCam", camPort};
-}
-
-void capturePeriodic() {
-  
-}
+class Capture : public curtin_frc_vision {
+  public:
+    cv::Mat imgOriginal;
+  private:
+};

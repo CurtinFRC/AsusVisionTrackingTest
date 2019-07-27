@@ -14,15 +14,38 @@
 
 class curtin_frc_vision {
  public:
-  void run();
+
+  // Vision Main Functions
+  void mapInit();
+
+  // Vision Init
+  void captureInit();
+  void processingInit();
+  void displayInit();
+
+  int camPort;
+  int resWidth;
+  int resHeight;
+  int camExposure;
+  int Rvalue;
+  int Gvalue;
+  int Bvalue;
+  bool useTapeDetection;
+  bool useBallDetection;
+  bool personDetection;
+  bool CustomDetection;
+  bool offset;
+  bool position;
+  bool distance;
+  int blur;
+  int noisefix;
 };
 
-void threading();
+// Vision Main Start Function
+void visionRun();
 
-// Vision Init
-void captureInit();
-void processingInit();
-void displayInit();
+// Threading
+void threading();
 
 // Vision Periodic
 void capturePeriodic();

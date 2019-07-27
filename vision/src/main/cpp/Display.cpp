@@ -3,7 +3,7 @@
 
 #include "vision.h"
 
-void displayInit() {
+void curtin_frc_vision::displayInit() {
   
 }
 

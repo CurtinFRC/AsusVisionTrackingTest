@@ -3,7 +3,7 @@
 
 #include "vision.h"
 
-void processingInit() {
+void curtin_frc_vision::processingInit() {
   
 }
 
