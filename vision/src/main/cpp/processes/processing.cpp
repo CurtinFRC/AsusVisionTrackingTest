@@ -3,10 +3,10 @@
 
 #include "vision.h"
 
-void displayInit() {
+void processingInit() {
   
 }
 
-void displayPeriodic() {
+void processingPeriodic() {
   
 }
