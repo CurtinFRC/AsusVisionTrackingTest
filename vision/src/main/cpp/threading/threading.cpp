@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "vision.h"
+#include "captures/capture.h"
 
 void threading() {
   // Thread Initialization
