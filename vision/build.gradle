@@ -102,8 +102,6 @@ model {
           }
         } else if (targetPlatform.name == TinkerboardPlugin.tinkerboardPlatform) {
           linker.args << '-pthread'
-        } else if (targetPlatform.name == wpi.platforms.raspbian) {
-          linker.args << '-pthread'
         }
       }
 
