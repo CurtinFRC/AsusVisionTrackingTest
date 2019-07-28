@@ -18,23 +18,27 @@
 
 void curtin_frc_vision::mapInit() {
 
+	/* */ // <--- still need to link
+
 	// Vision Config
 	camPort = 4;
 	resWidth = 640;
 	resHeight = 480;
 	camExposure = -100;
-	Rvalue = 0;
-	Gvalue = 0;
-	Bvalue = 0;
-	useTapeDetection = true;
-	useBallDetection = false;
-	personDetection = false;
-	CustomDetection = false;
-	offset = false;
-	position = false;
-	distance = false;
-	blur = 0;
-	noisefix = 0;
+	Rvalue = 0; /* */
+	Gvalue = 0; /* */
+	Bvalue = 0; /* */
+	blur = 0; /* */
+	noisefix = 0; /* */
+	useTapeDetection = true; /* */
+	useBallDetection = false; /* */
+	personDetection = false; /* */
+	CustomDetection = false; /* */
+	offset = false; /* */
+	position = false; /* */
+	distance = false; /* */
+	outputOriginalFrame = true; /* */
+	outputTrackingFrame = true; /* */
 
 	// Capture Math
 	widthGoal = resWidth/2;

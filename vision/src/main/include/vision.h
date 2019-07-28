@@ -1,5 +1,11 @@
 #pragma once
 
+// Main Libraries
+#include <thread>
+#include <iostream>
+#include <stdio.h>
+
+// OpenCV
 #include <opencv2/opencv.hpp>
 #include "opencv2/objdetect.hpp"
 #include "opencv2/highgui.hpp"
@@ -7,10 +13,11 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/core/core.hpp"
-#include <stdio.h>
 
+// Camera Servers
 #include <cameraserver/CameraServer.h>
 #include <cscore.h>
+
 
 class curtin_frc_vision {
  public:
@@ -36,7 +43,13 @@ class curtin_frc_vision {
   float heightGoal;
   float widthOffset;
   float heightOffset;
-  bool isValidFrame;
+  bool isValidFrame = false;
+
+  // Processing Variables
+  bool isDisplayable = false;
+
+  // Display Variables
+  cs::CvSource output;
 
   // Vision Map
   int camPort;
@@ -46,6 +59,8 @@ class curtin_frc_vision {
   int Rvalue;
   int Gvalue;
   int Bvalue;
+  int blur;
+  int noisefix;
   bool useTapeDetection;
   bool useBallDetection;
   bool personDetection;
@@ -53,8 +68,9 @@ class curtin_frc_vision {
   bool offset;
   bool position;
   bool distance;
-  int blur;
-  int noisefix;
+  bool outputOriginalFrame;
+	bool outputTrackingFrame;
+
 
   cv::Mat imgOriginal;
   cv::Mat imgTracking;

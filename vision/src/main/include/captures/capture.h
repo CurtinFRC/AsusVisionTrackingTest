@@ -19,6 +19,6 @@
 
 class Capture : public curtin_frc_vision {
   public:
-    cv::Mat imgOriginal;
+
   private:
 };
