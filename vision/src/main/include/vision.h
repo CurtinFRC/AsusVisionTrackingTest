@@ -45,8 +45,10 @@ class curtin_frc_vision {
   float heightOffset;
   bool isValidFrame = false;
 
-  // Processing Variables
+  // Processing Variables and functions
   bool isDisplayable = false;
+  int thresh = 100;
+  void TapeDetection();
 
   // Display Variables
   cs::CvSource output;

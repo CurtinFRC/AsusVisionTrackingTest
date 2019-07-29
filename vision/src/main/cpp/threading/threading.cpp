@@ -16,4 +16,3 @@ void curtin_frc_vision::threading() {
   processingObj.join();
   displayObj.join();
 }
-

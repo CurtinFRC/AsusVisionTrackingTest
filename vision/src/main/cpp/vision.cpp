@@ -29,16 +29,18 @@ void curtin_frc_vision::mapInit() {
 	Gvalue = 0; /* */
 	Bvalue = 0; /* */
 	blur = 0; /* */
-	noisefix = 0; /* */
+	noisefix = 0;
 	useTapeDetection = true; /* */
 	useBallDetection = false; /* */
 	personDetection = false; /* */
 	CustomDetection = false; /* */
-	offset = false; /* */
+	offset = true;
 	position = false; /* */
 	distance = false; /* */
 	outputOriginalFrame = true; /* */
 	outputTrackingFrame = true; /* */
+
+	// Order of initialiazation and threading priority 1 first
 
 	// Capture Math
 	widthGoal = resWidth/2;

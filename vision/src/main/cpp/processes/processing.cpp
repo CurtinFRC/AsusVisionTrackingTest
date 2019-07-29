@@ -19,6 +19,10 @@ void curtin_frc_vision::processingPeriodic() {
       cv::erode( imgTracking, imgTracking, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(noisefix, noisefix)));
 			cv::dilate(imgTracking, imgTracking, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(noisefix, noisefix)));
     }
+    
+    if (useTapeDetection) {
+      
+    }
 
     isDisplayable = true;
   }
