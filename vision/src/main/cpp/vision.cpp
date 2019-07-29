@@ -18,24 +18,33 @@
 
 void curtin_frc_vision::mapInit() {
 
+	/* */ // <--- still need to link
+
 	// Vision Config
 	camPort = 4;
 	resWidth = 640;
 	resHeight = 480;
 	camExposure = -100;
-	Rvalue = 0;
-	Gvalue = 0;
-	Bvalue = 0;
-	useTapeDetection = true;
-	useBallDetection = false;
-	personDetection = false;
-	CustomDetection = false;
-	offset = false;
-	position = false;
-	distance = false;
-	blur = 0;
+	Rvalue = 0; /* */
+	Gvalue = 0; /* */
+	Bvalue = 0; /* */
+	blur = 0; /* */
 	noisefix = 0;
+	useTapeDetection = true; /* */
+	useBallDetection = false; /* */
+	personDetection = false; /* */
+	CustomDetection = false; /* */
+	offset = true;
+	position = false; /* */
+	distance = false; /* */
+	outputOriginalFrame = true; /* */
+	outputTrackingFrame = true; /* */
 
+	// Order of initialiazation and threading priority 1 first
+
+	// Capture Math
+	widthGoal = resWidth/2;
+  heightGoal = resHeight/2;
 
 	// Output Values
 	std::cout << "camPort = " << camPort << std::endl;
@@ -51,6 +60,9 @@ void curtin_frc_vision::mapInit() {
 	std::cout << "distance = " << distance << std::endl;
 	std::cout << "blur = " << blur << std::endl;
 	std::cout << "noisefix = " << noisefix << std::endl;
+
+	// Capture Output
+	std::cout << "Goals: " << widthGoal << "," << heightGoal << std::endl; 
 }
 
 void visionRun() {
@@ -62,6 +74,7 @@ void visionRun() {
 
 	// Periodic
 	while (true) {
-		threading();
+		curtin_frc_vision threadStart;
+		threadStart.threading();
 	}
 }
