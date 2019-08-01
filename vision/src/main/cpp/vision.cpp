@@ -21,7 +21,7 @@ void curtin_frc_vision::mapInit() {
 	/* */ // <--- still need to link
 
 	// Vision Config
-	camPort = 4;
+	camPort = 0;
 	resWidth = 640;
 	resHeight = 480;
 	camExposure = -100;
@@ -40,7 +40,14 @@ void curtin_frc_vision::mapInit() {
 	outputOriginalFrame = true; /* */
 	outputTrackingFrame = true; /* */
 
+
 	// Order of initialiazation and threading priority 1 first
+	CapturePriority = 1; /* */
+	ProcessingPriority = 2; /* */
+	TapeDetectionPriority = 3; /* */
+	BallDetectionPriority = 4; /* */
+	SquareDetectionPriority = 5; /* */
+	DisplayPriority = 6; /* */
 
 	// Capture Math
 	widthGoal = resWidth/2;
@@ -65,14 +72,9 @@ void curtin_frc_vision::mapInit() {
 	std::cout << "Goals: " << widthGoal << "," << heightGoal << std::endl; 
 }
 
-void visionRun() {
+void curtin_frc_vision::visionRun() {
 	// Initialization
-	curtin_frc_vision init;
-	init.captureInit();
-	init.processingInit();
-	init.displayInit();
-
-	// Periodic
+	
 	while (true) {
 		curtin_frc_vision threadStart;
 		threadStart.threading();
