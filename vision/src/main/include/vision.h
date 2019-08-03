@@ -29,6 +29,7 @@ class curtin_frc_vision {
 
   // Threading
   void threading();
+  std::mutex mtx;
 
   // Capture Variables
   float widthGoal;

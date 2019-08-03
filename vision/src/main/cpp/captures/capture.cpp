@@ -3,6 +3,8 @@
 #include "vision.h"
 
 void Capture::captureInit() {
+  mtx.lock(); // Critical Selection for this thread until unlocked
+
   cs::UsbCamera cam{"USBCam", camPort};
   cs::CvSink sink{"USB"};
   sink.SetSource(cam);
@@ -19,6 +21,8 @@ void Capture::captureInit() {
   _captureMat = cv::Mat::zeros(video_mode.height, video_mode.width, CV_8UC3); // Zeros out the frame
 
   initCondVar.notify_all();
+
+  mtx.unlock(); // Unlocks the thread
 }
 
 void Capture::capturePeriodic() {

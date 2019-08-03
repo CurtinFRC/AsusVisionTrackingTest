@@ -1,7 +1,6 @@
 #include <thread>
 #include <iostream>
 
-#include "vision.h"
 #include "processes/processing.h"
 
 //Set _capture as a Capture object reference

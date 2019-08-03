@@ -20,8 +20,8 @@
 
 class Capture : public curtin_frc_vision, public Displayable {
   public:
-  void captureInit() override;
-  void capturePeriodic() override;
+  void captureInit();
+  void capturePeriodic();
 
   void CopyCaptureMat(cv::Mat &captureMat);
 

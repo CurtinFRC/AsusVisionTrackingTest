@@ -22,11 +22,11 @@
 // Local Libraries
 #include "captures/capture.h"
 
-class Process : public curtin_frc_vision, public Display {
+class Process : public curtin_frc_vision, public Displayable {
  public:
 
-  virtual void processingInit() override;
-  virtual void processingPeriodic() override;
+  virtual void processingInit();
+  virtual void processingPeriodic();
 
   Process(Capture &capture);
   Capture &GetCapture();

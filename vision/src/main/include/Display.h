@@ -15,8 +15,8 @@ class Display : public curtin_frc_vision {
  public:
   Display(std::string name, Displayable &target);
 
-  void displayInit() override;
-  void displayPeriodic() override;
+  void displayInit();
+  void displayPeriodic();
 
  private:
   std::string _name;

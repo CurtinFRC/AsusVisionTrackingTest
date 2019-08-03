@@ -22,6 +22,7 @@ void curtin_frc_vision::threading() {
   // std::thread ballDetectionObj(&curtin_frc_vision::BallDetection, this);
   // std::thread squareDetection(&curtin_frc_vision::SquareDetection, this);
 
+  // Display Thread Initialization
   std::thread displayInitObj(&Display::displayInit, this);
   std::thread displayPeriodicObj(&Display::displayPeriodic, this);
 
