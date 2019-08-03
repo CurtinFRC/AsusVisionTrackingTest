@@ -2,30 +2,34 @@
 #include "captures/capture.h"
 #include "vision.h"
 
-void curtin_frc_vision::captureInit() {
+void Capture::captureInit() {
+  mtx.lock(); // Critical Selection for this thread until unlocked
+
   cs::UsbCamera cam{"USBCam", camPort};
   cs::CvSink sink{"USB"};
   sink.SetSource(cam);
+  std::cout << "Started Capture" << std::endl;
 
   cam.SetResolution(resWidth, resHeight);
+  cam.SetExposureManual(camExposure); // Sets the exposure of the camera
 
   auto video_mode = cam.GetVideoMode();
 
   // This lets us see the camera output on the robot dashboard. We give it a name, and a width and height.
   output = frc::CameraServer::GetInstance()->PutVideo("USB Camera", video_mode.width, video_mode.height);
 
-  imgOriginal = cv::Mat::zeros(video_mode.height, video_mode.width, CV_8UC3); // Zeros out the frame
+  _captureMat = cv::Mat::zeros(video_mode.height, video_mode.width, CV_8UC3); // Zeros out the frame
 
-  cam.SetExposureManual(camExposure); // Sets the exposure of the camera
+  initCondVar.notify_all();
 
-  if (sink.GrabFrame(imgOriginal) != 0) {
-    isValidFrame = true;
-  }
-  
+  mtx.unlock(); // Unlocks the thread
 }
 
-void curtin_frc_vision::capturePeriodic() {
-  if (isValidFrame) {
-    cvtColor(imgOriginal, imgTracking, CV_BGR2HSV); // Converts the frame from BGR to HSV
-  }
+void Capture::capturePeriodic() {
+  isValidFrame = sink.GrabFrame(_captureMat) != 0;
+}
+
+void Capture::CopyCaptureMat(cv::Mat &captureMat) {
+  std::lock_guard<std::mutex> lock(classMutex);
+  _captureMat.copyTo(captureMat);
 }

@@ -4,6 +4,7 @@
 #include <thread>
 #include <iostream>
 #include <stdio.h>
+#include <mutex>
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -24,19 +25,11 @@ class curtin_frc_vision {
 
   // Vision Main Functions
   void mapInit();
-
-  // Vision Init
-  void captureInit();
-  void processingInit();
-  void displayInit();
+  void visionRun();
 
   // Threading
   void threading();
-    
-  // Vision Periodic
-  void capturePeriodic();
-  void processingPeriodic();
-  void displayPeriodic();
+  std::mutex mtx;
 
   // Capture Variables
   float widthGoal;
@@ -44,6 +37,9 @@ class curtin_frc_vision {
   float widthOffset;
   float heightOffset;
   bool isValidFrame = false;
+  cs::CvSink sink;
+  std::mutex classMutex;
+  std::condition_variable initCondVar;
 
   // Processing Variables and functions
   bool isDisplayable = false;
@@ -73,10 +69,14 @@ class curtin_frc_vision {
   bool outputOriginalFrame;
 	bool outputTrackingFrame;
 
+  // Priority thread starting
+  int CapturePriority;
+  int ProcessingPriority;
+  int TapeDetectionPriority;
+  int BallDetectionPriority;
+  int SquareDetectionPriority;
+  int DisplayPriority;
 
-  cv::Mat imgOriginal;
   cv::Mat imgTracking;
-};
 
-// Vision Main Start Function
-void visionRun();
+};

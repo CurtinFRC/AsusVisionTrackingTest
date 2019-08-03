@@ -16,9 +16,9 @@ int main() {
   std::cout << "Starting Vision Program" << std::endl;
 
   // Vision Program Start
-  curtin_frc_vision visionInit;
-  visionInit.mapInit();
-  visionRun();
+  curtin_frc_vision visionProgram;
+  visionProgram.mapInit();
+  visionProgram.visionRun();
 
   // Backup Statement
   std::cout << "Vision Program Exited. Was that meant to happen?" << std::endl;

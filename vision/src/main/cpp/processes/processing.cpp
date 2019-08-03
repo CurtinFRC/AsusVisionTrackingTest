@@ -1,14 +1,20 @@
 #include <thread>
 #include <iostream>
 
-#include "vision.h"
-#include "process.h"
+#include "processes/processing.h"
 
-void curtin_frc_vision::processingInit() {
+//Set _capture as a Capture object reference
+Process::Process(Capture &capture) : _capture(capture) {}
+
+Capture &Process::GetCapture() {
+  return _capture;
+}
+
+void Process::processingInit() {
   
 }
 
-void curtin_frc_vision::processingPeriodic() {
+void Process::processingPeriodic() {
   if (isValidFrame) {
 
     // Threshold the HSV image, (keeps only desired coloured pixles)
