@@ -27,5 +27,3 @@ Vision Tracking Documentation.
 ### 6. Run your code locally on your computer using (`.\gradlew :vision:runvision` or simply type `.\gradlew runvision`)
 ### 7. Deploy `./gradlew :vision:deploy` (`./gradlew :vision:deploy -Praspberry` for the Raspberry Pi) to deploy your code!
 
-
-
