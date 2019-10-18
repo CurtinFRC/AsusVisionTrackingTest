@@ -22,7 +22,7 @@ Vision Tracking Documentation.
   - Raspberry Pi:
     - Hostname: `raspberrypi`, Username: `pi`, Password: `raspberry`
 ### 4. Run the following command:
-  - `wget --no-check-certificate -qO - https://github.com/CJBuchel/Vision-Tracking-Format/blob/master/vision/bootstrap.sh?raw=1 | bash`
+  - `wget --no-check-certificate -qO - https://github.com/CurtinFRC/ModularVisionTracking/blob/master/vision/bootstrap.sh?raw=1 | bash`
 ### 5. Your Coprocessor will now restart
 ### 6. Run your code locally on your computer using (`.\gradlew :vision:runvision` or simply type `.\gradlew runvision`)
 ### 7. Deploy `./gradlew :vision:deploy` (`./gradlew :vision:deploy -Praspberry` for the Raspberry Pi) to deploy your code!
