@@ -1,3 +1,7 @@
+# THIS PROJECT IS DISCONTINUED.
+## After rebuilding this project into a library [CJ-Vision](https://github.com/wml-frc/CJ-Vision.git) this has been archived
+
+
 # Vision-Tracking-Format
 A simple vision tracking format to use and create other programs with, by deafult it should be somewhat setup for the 2019 FRC game Deep Space
 
