@@ -1,5 +1,5 @@
 # THIS PROJECT IS DISCONTINUED.
-## After rebuilding this project into a library [CJ-Vision](https://github.com/wml-frc/CJ-Vision.git) this has been archived
+## After rebuilding this project into a library named [CJ-Vision](https://github.com/wml-frc/CJ-Vision.git). This has now been archived
 
 
 # Vision-Tracking-Format
